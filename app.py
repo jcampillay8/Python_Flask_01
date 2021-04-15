@@ -17,7 +17,7 @@ def saludo(nombre):
 @app.route('/repeat/<word>/<number>')
 def repeat(word,number):
     word = word
-    number = number
+    number = int(number)
     return render_template ("index.html",word = word, number = number)
 
 if __name__ == "__main__":
