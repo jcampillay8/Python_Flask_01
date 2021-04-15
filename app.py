@@ -14,10 +14,11 @@ def dojo():
 def saludo(nombre):
     return "¡Hola "+nombre+"!"
 
-@app.route('/repeat/<word>')
-def repeat(word):
+@app.route('/repeat/<word>/<number>')
+def repeat(word,number):
     word = word
-    return render_template ("index.html",word = word)
+    number = number
+    return render_template ("index.html",word = word, number = number)
 
 if __name__ == "__main__":
     app.run(debug=True)
